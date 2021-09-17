@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Notebook &#8212; Quiz Mill</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Send to Canvas" href="send-to-canvas.html" />
+    <link rel="prev" title="Generate Notebooks" href="generate-notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Quiz Mill</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Documentation
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="quickstart.html">
+   Quickstart
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="getting-started.html">
+   Getting Started
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="environment-setup.html">
+     Environment setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="project-file-structure.html">
+     Project file structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="canvas-api.html">
+     Getting the Canvas API token
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="how-to-guides.html">
+   How-to guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="convert-notebooks-to-quizzes.html">
+     Convert Jupyter notebooks to Canvas quizzes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="explanation.html">
+   Explanation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="remove-quizzes.html">
+     Remove Quizzes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="clean-output.html">
+     Clean output
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generate-notebooks.html">
+     Generate Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Filter Notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="send-to-canvas.html">
+     Send to Canvas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="reference.html">
+   Reference
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="terminology.html">
+     Terminology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="commands.html">
+     Command reference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="notebooks.html">
+   Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_two_layers.html">
+     Base notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_output_two_layers1.html">
+     Example unfiltered notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_output_two_layers1_student.html">
+     Example filtered student notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_output_two_layers1_solution.html">
+     Example filtered solution notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="_sources/filter-notebooks.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/filter-notebooks.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/eoas-ubc/quiz_mill/cz-docs?urlpath=tree/docs/filter-notebooks.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.eoastest5.xyz/hub/user-redirect/git-pull?repo=https://github.com/eoas-ubc/quiz_mill&urlpath=tree/quiz_mill/docs/filter-notebooks.md&branch=cz-docs"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-the-script-works">
+   How the script works
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-libraries">
+     Import libraries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#helper-functions">
+     Helper functions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-quiz-metadata">
+       Add quiz metadata
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-group-metadata">
+       Add group metadata
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#get-injected-parameters">
+       Get injected parameters
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-questions-cells">
+       Add questions cells
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#get-layer-1-answer">
+       Get layer 1 answer
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#save-student-notebook">
+       Save student notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#save-solution-notebook">
+       Save solution notebook
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#main-function">
+     Main function
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample-outputs">
+   Sample outputs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#student-notebook">
+     Student notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution-notebook">
+     Solution notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="filter-notebook">
+<h1>Filter Notebook<a class="headerlink" href="#filter-notebook" title="Permalink to this headline">¶</a></h1>
+<p>Note: currently only works for Two Layers quizzes.</p>
+<p>This script takes in a directory path containing “unfiltered” notebooks and outputs “filtered” student and solution notebooks. “Unfiltered” notebooks do not contain metadata associated with questions, answers, and parameters. “Filtered” student notebooks only contains questions, while the solution notebooks contains questions and answers. Both types of “filtered” notebooks contain specific metadata, allowing us to use the <strong>md2canvas</strong> command to upload our notebooks as quizzes to canvas.</p>
+<div class="section" id="how-the-script-works">
+<h2>How the script works<a class="headerlink" href="#how-the-script-works" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import-libraries">
+<h3>Import libraries<a class="headerlink" href="#import-libraries" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">jupytext</span> <span class="k">as</span> <span class="nn">jp</span>
+<span class="kn">from</span> <span class="nn">jupytext.cli</span> <span class="kn">import</span> <span class="n">jupytext</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">nbformat.v4.nbbase</span> <span class="kn">import</span> <span class="n">new_markdown_cell</span>
+<span class="kn">import</span> <span class="nn">click</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">.solve_layers</span> <span class="kn">import</span> <span class="n">do_two_matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="helper-functions">
+<h3>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="add-quiz-metadata">
+<h4>Add quiz metadata<a class="headerlink" href="#add-quiz-metadata" title="Permalink to this headline">¶</a></h4>
+<p>Adds metadata to indicate that our notebook is a quiz. We are also able to customize quiz options.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_quiz_metadata</span><span class="p">(</span><span class="n">quiz_num</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Two Layers Quiz&quot;</span><span class="p">,</span> <span class="n">allowed_attempts</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scoring_policy</span><span class="o">=</span><span class="s2">&quot;keep_highest&quot;</span><span class="p">,</span> <span class="n">cant_go_back</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">shuffle_answers</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">quiz</span> <span class="o">=</span> <span class="n">new_markdown_cell</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;# </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">quiz_num</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">quiz</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;ctype&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;quiz&quot;</span>
+    <span class="n">quiz</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">quiz_num</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">quiz</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;allowed_attempts&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">allowed_attempts</span>
+    <span class="n">quiz</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;scoring_policy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scoring_policy</span>
+    <span class="n">quiz</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;cant_go_back&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cant_go_back</span>
+    <span class="n">quiz</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;shuffle_answers&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shuffle_answers</span>
+    <span class="k">return</span> <span class="n">quiz</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-group-metadata">
+<h4>Add group metadata<a class="headerlink" href="#add-group-metadata" title="Permalink to this headline">¶</a></h4>
+<p>Indicates the start of the quiz questions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_group_metadata</span><span class="p">():</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">new_markdown_cell</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">&quot;## Questions&quot;</span><span class="p">)</span>
+    <span class="n">group</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;ctype&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;group&quot;</span>
+    <span class="n">group</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;general&quot;</span>
+    <span class="k">return</span> <span class="n">group</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-injected-parameters">
+<h4>Get injected parameters<a class="headerlink" href="#get-injected-parameters" title="Permalink to this headline">¶</a></h4>
+<p>Each unfiltered notebook contains injected random parameters (from generate_notebooks.py). This function parses the values from the notebook to get the answer for our questions.</p>
+<p>Note: specific to Two Layers quizzes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_injected_parameters</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">the_cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nb</span><span class="p">[</span><span class="s1">&#39;cells&#39;</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="p">(</span>
+                    <span class="nb">len</span><span class="p">(</span><span class="n">the_cell</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;tags&quot;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> 
+                    <span class="n">the_cell</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;tags&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;injected-parameters&quot;</span>
+                    <span class="p">):</span>
+            <span class="n">parameters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">the_cell</span><span class="p">[</span><span class="s2">&quot;source&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">sol</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;^sol = &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="n">epsilon1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;^epsilon1 = &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">epsilon2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;^epsilon2 = &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+            <span class="n">albedo</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;^albedo = &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">sol</span><span class="p">,</span><span class="n">epsilon1</span><span class="p">,</span><span class="n">epsilon2</span><span class="p">,</span><span class="n">albedo</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-questions-cells">
+<h4>Add questions cells<a class="headerlink" href="#add-questions-cells" title="Permalink to this headline">¶</a></h4>
+<p>Creates a question cell containing the appropriate metadata.</p>
+<p>Note: specific to Two Layers quizzes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_question_cells</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="n">epsilon1</span><span class="p">,</span> <span class="n">epsilon2</span><span class="p">,</span> <span class="n">albedo</span><span class="p">):</span>
+    <span class="n">source</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">### Question 1</span>
+<span class="s2">sol = </span><span class="si">{</span><span class="n">sol</span><span class="si">}</span><span class="s2">, epsilon1 = </span><span class="si">{</span><span class="n">epsilon1</span><span class="si">}</span><span class="s2">, epsilon2 = </span><span class="si">{</span><span class="n">epsilon2</span><span class="si">}</span><span class="s2">, albedo = </span><span class="si">{</span><span class="n">albedo</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">Given the above parameters, find the temperature of layer 1.</span>
+<span class="s2">Give your answer to three decimal places.</span><span class="se">\</span>
+<span class="s2">&quot;&quot;&quot;</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="n">new_markdown_cell</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+    <span class="n">question</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;quesnum&quot;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;1&#39;</span>
+    <span class="n">question</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;ctype&quot;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;question&#39;</span>
+    <span class="n">question</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">][</span><span class="s2">&quot;question_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;numerical_question&quot;</span>
+    <span class="k">return</span> <span class="n">question</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-layer-1-answer">
+<h4>Get layer 1 answer<a class="headerlink" href="#get-layer-1-answer" title="Permalink to this headline">¶</a></h4>
+<p>Creates an answer cell containing the temperature of layer 1.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_layer_1_ans</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="n">epsilon1</span><span class="p">,</span> <span class="n">epsilon2</span><span class="p">,</span> <span class="n">albedo</span><span class="p">):</span>
+    <span class="n">T1</span> <span class="o">=</span> <span class="n">do_two_matrix</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="n">albedo</span><span class="p">,</span> <span class="n">epsilon1</span><span class="p">,</span> <span class="n">epsilon2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;* </span><span class="si">{:0.3f}</span><span class="s2">, 3: precision_answer&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">T1</span><span class="p">)</span>
+    <span class="n">answer0</span> <span class="o">=</span> <span class="n">new_markdown_cell</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+    <span class="n">answer0</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">][</span><span class="s1">&#39;quesnum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+    <span class="n">answer0</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">][</span><span class="s1">&#39;ctype&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;answer&#39;</span>
+    <span class="k">return</span> <span class="n">answer0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="save-student-notebook">
+<h4>Save student notebook<a class="headerlink" href="#save-student-notebook" title="Permalink to this headline">¶</a></h4>
+<p>Saves student notebook to user-inputted folder.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save_student_notebook</span><span class="p">(</span><span class="n">out_folder</span><span class="p">,</span> <span class="n">in_file</span><span class="p">,</span> <span class="n">nb</span><span class="p">,</span> <span class="n">new_cells</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+    <span class="n">nb</span><span class="p">[</span><span class="s1">&#39;cells&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_cells</span>
+    <span class="n">out_file</span> <span class="o">=</span> <span class="n">out_folder</span> <span class="o">/</span> <span class="s2">&quot;student&quot;</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">in_file</span><span class="p">[:</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span><span class="si">}</span><span class="s2">_student&quot;</span>
+    <span class="n">out_file</span> <span class="o">=</span> <span class="n">out_file</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s1">&#39;.md&#39;</span><span class="p">)</span>
+    <span class="n">jp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span><span class="n">out_file</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;md:myst&#39;</span><span class="p">)</span>
+    <span class="n">out_file</span> <span class="o">=</span> <span class="n">out_file</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s1">&#39;.ipynb&#39;</span><span class="p">)</span>
+    <span class="n">jp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span><span class="n">out_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="save-solution-notebook">
+<h4>Save solution notebook<a class="headerlink" href="#save-solution-notebook" title="Permalink to this headline">¶</a></h4>
+<p>Saves solution notebook to user-inputted folder.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save_solution_notebook</span><span class="p">(</span><span class="n">out_folder</span><span class="p">,</span> <span class="n">in_file</span><span class="p">,</span> <span class="n">nb</span><span class="p">,</span> <span class="n">new_cells</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+    <span class="n">nb</span><span class="p">[</span><span class="s1">&#39;cells&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_cells</span>
+    <span class="n">out_file</span> <span class="o">=</span> <span class="n">out_folder</span> <span class="o">/</span> <span class="s2">&quot;solution&quot;</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">in_file</span><span class="p">[:</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span><span class="si">}</span><span class="s2">_solution&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">out_file</span><span class="p">)</span>
+    <span class="n">out_file</span> <span class="o">=</span> <span class="n">out_file</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s1">&#39;.md&#39;</span><span class="p">)</span>
+    <span class="n">jp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span><span class="n">out_file</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;md:myst&#39;</span><span class="p">)</span>
+    <span class="n">out_file</span> <span class="o">=</span> <span class="n">out_file</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s1">&#39;.ipynb&#39;</span><span class="p">)</span>
+    <span class="n">jp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span><span class="n">out_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="main-function">
+<h3>Main function<a class="headerlink" href="#main-function" title="Permalink to this headline">¶</a></h3>
+<p>How it works:</p>
+<ol class="simple">
+<li><p>Check if user-inputted directories exist. If yes, continue. Else, return.</p></li>
+<li><p>Get an “unfiltered” notebook from user-inputted directory</p></li>
+<li><p>Add appropriate metadata</p></li>
+<li><p>Add questions and save “filtered” student notebook</p></li>
+<li><p>Add solutions and save “filtered” solution notebook</p></li>
+<li><p>Repeat from step 2 until all “unfiltered” notebooks are “filtered”</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="n">is_flag</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+    <span class="n">in_folder</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="s2">&quot;unfiltered&quot;</span>
+    <span class="n">out_folder</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="s2">&quot;filtered&quot;</span>
+
+    <span class="c1"># Return if directory does not exists</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">in_folder</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">out_folder</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;One or more inputted directory paths does not exist.&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Iterate through each unfiltered notebook and filter it</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">in_folder</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+        <span class="n">quiz_num</span> <span class="o">=</span> <span class="mi">1</span>
+        
+        <span class="k">for</span> <span class="n">in_file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">nb</span> <span class="o">=</span> <span class="n">jp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">in_folder</span> <span class="o">/</span> <span class="n">in_file</span><span class="p">)</span>
+
+            <span class="n">new_cells</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="c1"># Add quiz metadata</span>
+            <span class="n">quiz</span> <span class="o">=</span> <span class="n">add_quiz_metadata</span><span class="p">(</span><span class="n">quiz_num</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Two Layers Quiz&quot;</span><span class="p">,</span> <span class="n">allowed_attempts</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scoring_policy</span><span class="o">=</span><span class="s2">&quot;keep_highest&quot;</span><span class="p">,</span> <span class="n">cant_go_back</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">shuffle_answers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">new_cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">quiz</span><span class="p">)</span>
+            <span class="n">quiz_num</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># Add group metadata</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">add_group_metadata</span><span class="p">()</span>
+            <span class="n">new_cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+
+            <span class="c1"># Get parameters</span>
+            <span class="n">sol</span><span class="p">,</span> <span class="n">epsilon1</span><span class="p">,</span> <span class="n">epsilon2</span><span class="p">,</span> <span class="n">albedo</span> <span class="o">=</span> <span class="n">get_injected_parameters</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+
+            <span class="c1"># Add question cells</span>
+            <span class="n">question</span> <span class="o">=</span> <span class="n">add_question_cells</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="n">epsilon1</span><span class="p">,</span> <span class="n">epsilon2</span><span class="p">,</span> <span class="n">albedo</span><span class="p">)</span>
+            <span class="n">new_cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+
+            <span class="c1"># Save student notebook</span>
+            <span class="n">save_student_notebook</span><span class="p">(</span><span class="n">out_folder</span><span class="p">,</span> <span class="n">in_file</span><span class="p">,</span> <span class="n">nb</span><span class="p">,</span> <span class="n">new_cells</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+
+            <span class="c1"># Add solutions</span>
+            <span class="n">answer0</span> <span class="o">=</span> <span class="n">get_layer_1_ans</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="n">epsilon1</span><span class="p">,</span> <span class="n">epsilon2</span><span class="p">,</span> <span class="n">albedo</span><span class="p">)</span>
+            <span class="n">new_cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">answer0</span><span class="p">)</span>
+            
+            <span class="c1"># Save solution notebook</span>
+            <span class="n">save_solution_notebook</span><span class="p">(</span><span class="n">out_folder</span><span class="p">,</span> <span class="n">in_file</span><span class="p">,</span> <span class="n">nb</span><span class="p">,</span> <span class="n">new_cells</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sample-outputs">
+<h2>Sample outputs<a class="headerlink" href="#sample-outputs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="student-notebook">
+<h3>Student notebook<a class="headerlink" href="#student-notebook" title="Permalink to this headline">¶</a></h3>
+<p><img alt="student notebook" src="_images/student_notebook.png" /></p>
+</div>
+<div class="section" id="solution-notebook">
+<h3>Solution notebook<a class="headerlink" href="#solution-notebook" title="Permalink to this headline">¶</a></h3>
+<p><img alt="solution notebook" src="_images/solution_notebook.png" /></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="generate-notebooks.html" title="previous page">Generate Notebooks</a>
+    <a class='right-next' id="next-link" href="send-to-canvas.html" title="next page">Send to Canvas</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By everyone<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

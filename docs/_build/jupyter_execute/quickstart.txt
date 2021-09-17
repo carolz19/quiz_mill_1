@@ -1,0 +1,3 @@
+%%bash
+NUM=5
+sh ../quiz_mill/do_all.sh $NUM 

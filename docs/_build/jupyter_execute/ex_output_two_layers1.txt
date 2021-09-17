@@ -1,0 +1,20 @@
+from quiz_mill.solve_layers import do_two, do_two_matrix, find_temps
+
+# Default parameters
+sol = 341.0
+epsilon1 = 0.55
+epsilon2 = 0.55
+albedo = 0.3
+
+# Parameters
+sol = 193.5
+epsilon1 = 0.63
+epsilon2 = 0.63
+albedo = 0.14
+
+analytic_fluxes = do_two(sol, epsilon1, albedo)
+numeric_fluxes = do_two_matrix(sol, albedo, epsilon1, epsilon2)
+print(f"analytic temperatures: {find_temps(analytic_fluxes)}")
+print(f"numeric temperatues: {find_temps(numeric_fluxes)}")
+
+

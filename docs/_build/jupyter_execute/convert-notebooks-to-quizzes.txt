@@ -1,0 +1,15 @@
+%%bash
+remove -v ..
+
+%%bash
+clean -v
+
+%%bash
+N=5
+generate -n $N notebooks/
+
+%%bash
+filter -v notebooks/output
+
+%%bash
+send -c 51824 -v notebooks/output/filtered/solution/
