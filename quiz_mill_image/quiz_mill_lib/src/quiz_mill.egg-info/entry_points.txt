@@ -1,0 +1,8 @@
+[console_scripts]
+clean = quiz_mill.clean_output:main
+filter = quiz_mill.filter_notebook:main
+generate = quiz_mill.generate_notebooks:main
+remove = quiz_mill.remove_quizzes:main
+run-papermill = quiz_mill.run_papermill:main
+send = quiz_mill.send_to_canvas:main
+
